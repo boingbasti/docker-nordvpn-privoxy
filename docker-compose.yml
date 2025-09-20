@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  http-proxy:
+    # Replace with your desired Docker Hub image name
+    image: boingbasti/nordvpn-privoxy:latest
+    build: .
+    container_name: privoxy-proxy
+    ports:
+      # Exposes Privoxy's default port to the host
+      - "8118:8118"
+    restart: unless-stopped
