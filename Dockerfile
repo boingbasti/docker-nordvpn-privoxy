@@ -1,9 +1,10 @@
 # Pinne die Alpine-Version (aktuell 3.20)
 FROM alpine:3.20
 
-# apk add wird die neueste Patch-Version von privoxy installieren
-# Es erstellt auch automatisch einen 'privoxy' user, den wir nutzen werden
-RUN apk add --no-cache privoxy
+# --- GEÄNDERT ---
+# Füge curl hinzu, benötigt für den Healthcheck
+RUN apk add --no-cache privoxy curl
+# --- ENDE ---
 
 # Kopiere die korrigierte Konfiguration
 COPY privoxy.conf /etc/privoxy/config
