@@ -31,9 +31,6 @@ There are two primary ways to use this proxy:
 ### 1. Standalone Mode
 Run the proxy directly and expose its port to your host machine.
 ```yaml
-# docker-compose.yml
-version: "3.9"
-
 services:
   http-proxy:
     image: boingbasti/nordvpn-privoxy:latest
