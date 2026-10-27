@@ -1,4 +1,4 @@
-FROM alpine:3.23
+FROM alpine:3.24
 
 # Install privoxy and curl (curl required for healthcheck)
 RUN apk add --no-cache privoxy curl
